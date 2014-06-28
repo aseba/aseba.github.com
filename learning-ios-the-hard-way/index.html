@@ -45,7 +45,7 @@
 <p>The take-away from those tutorial was (and this is coming after a day of doing several of these):</p>
 
 <ol>
-<li><p>It looks like <strong>UIKit</strong> is a library that contains everything you may need to <em>Draw</em> iOS things in the phone. Meaning that every element you can draw or any class you should inherit from to use them is in there.</p></li>
+<li><p>It looks like <strong>UIKit</strong> is a library that contains every iOS thing you may need to <em>Draw</em> on the phone. Meaning that every element you can draw or any class you should inherit from to use it is in there.</p></li>
 <li><p>It looks like everything in <strong>UIKit</strong> is though with an <strong>MVC</strong> architecture in mind. Meaning you always end up with a certain <strong>View</strong> talking with a <strong>Controller</strong> that uses a <strong>Model</strong> you code. Every <strong>View</strong> in <strong>UIKit</strong> has a <strong>ViewController</strong> that you will have to extend and override to your needs.</p></li>
 </ol><p>After I <em>learned</em> all that in one day, I thought I could just start a new empty project in Xcode and build my expenses app.</p>
 
@@ -84,11 +84,10 @@
 
 <p>This is were I went bananas and started a new SingleView project to compare what the heck wasn't I doing right. I realised that my <code>AppDelegate</code> class had 3 lines different from the other one (after opening two Xcode projects side by side and comparing file by file)</p>
 
-<pre><code>self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+<pre><code>    self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+  self.window!.backgroundColor = UIColor.whiteColor()
+  self.window!.makeKeyAndVisible()
 </code></pre>
-
-<p>self.window!.backgroundColor = UIColor.whiteColor()
-  self.window!.makeKeyAndVisible()</p>
 
 <p>I guess this was overriding my main interface configuration and displaying a white window as my app. Damn you lines!!!! I removed them. Play. Now I see a table view!</p>
 

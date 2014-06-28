@@ -22,7 +22,7 @@ I Found [this series of tutorials](http://www.raywenderlich.com/74438/swift-tuto
 
 The take-away from those tutorial was (and this is coming after a day of doing several of these):
 
-1. It looks like **UIKit** is a library that contains everything you may need to *Draw* iOS things in the phone. Meaning that every element you can draw or any class you should inherit from to use them is in there.
+1. It looks like **UIKit** is a library that contains every iOS thing you may need to *Draw* on the phone. Meaning that every element you can draw or any class you should inherit from to use it is in there.
 
 1. It looks like everything in **UIKit** is though with an **MVC** architecture in mind. Meaning you always end up with a certain **View** talking with a **Controller** that uses a **Model** you code. Every **View** in **UIKit** has a **ViewController** that you will have to extend and override to your needs.
 
@@ -60,9 +60,11 @@ According to what I thought I did, I should have a TableView with 10 cells displ
 
 This is were I went bananas and started a new SingleView project to compare what the heck wasn't I doing right. I realised that my `AppDelegate` class had 3 lines different from the other one (after opening two Xcode projects side by side and comparing file by file)
 
+```
 	self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
   self.window!.backgroundColor = UIColor.whiteColor()
   self.window!.makeKeyAndVisible()
+```
 
 I guess this was overriding my main interface configuration and displaying a white window as my app. Damn you lines!!!! I removed them. Play. Now I see a table view!
 
