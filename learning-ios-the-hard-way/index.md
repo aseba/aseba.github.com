@@ -61,9 +61,9 @@ According to what I thought I did, I should have a TableView with 10 cells displ
 This is were I went bananas and started a new SingleView project to compare what the heck wasn't I doing right. I realised that my `AppDelegate` class had 3 lines different from the other one (after opening two Xcode projects side by side and comparing file by file)
 
 ```
-	self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-  self.window!.backgroundColor = UIColor.whiteColor()
-  self.window!.makeKeyAndVisible()
+self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+self.window!.backgroundColor = UIColor.whiteColor()
+self.window!.makeKeyAndVisible()
 ```
 
 I guess this was overriding my main interface configuration and displaying a white window as my app. Damn you lines!!!! I removed them. Play. Now I see a table view!
