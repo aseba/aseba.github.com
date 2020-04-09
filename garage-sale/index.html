@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garage Sale!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        body {
+            font-family:'Montserrat', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #hero{
+            text-align: center;
+            background-color: #fff6c7;
+            padding: 10em 0;
+            margin: 0 0 2em 0;
+        }
+        #footer {
+            text-align: center;
+            background-color: #fff6c7;
+            margin: 0;
+            padding: 1em 0;
+        }
+        #hero p, #footer p{
+            color: rgba(0,0,0,0.5);
+            margin: 0;
+            padding: 0;
+        }
+        #hero p {
+            margin: 2em 0;
+        }
+        #catalog, #contact {
+            padding: 3em 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="hero">
+        <div class="container">
+            <h1>Garage Sale!</h1>
+            <p>Porque ya no las necesitamos...</p>
+            <a class="button" href="#catalog">Ver Catalogo</a> ⌯
+            <a class="button" href="#contact">Te gustó algo? Escribinos!</a>
+        </div>
+    </div>
+
+    <div id="catalog">
+        <div class="container">
+            <!-- <iframe class="airtable-embed" src="https://airtable.com/embed/shrRsVRT1iU7XuhKt?backgroundColor=purple&layout=card" frameborder="0" onmousewheel="" width="100%" height="800" style="background: transparent;"></iframe> -->
+            <iframe class="airtable-embed" src="https://airtable.com/embed/shroZiIictjbh2apH?backgroundColor=purple" frameborder="0" onmousewheel="" width="100%" height="600" style="background: transparent; border: 1px solid #ccc;"></iframe>
+        </div>
+    </div>
+    
+    <div id="contact">
+        <div class="container">
+            <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script><iframe class="airtable-embed airtable-dynamic-height" src="https://airtable.com/embed/shrihWoctk7DPKaS5?backgroundColor=purple" frameborder="0" onmousewheel="" width="100%" height="797" style="background: transparent;"></iframe>
+        </div>
+    </div>
+        
+    <div id="footer">
+        <p>From Juli and Seba with ♥️</p>
+    </div>
+</body>
+</html>
